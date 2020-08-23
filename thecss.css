@@ -66,6 +66,11 @@ h2 {
   padding-left: 170px;
 }
 
+.puzzle {
+  padding: 0;
+  margin: 0;
+}
+
 .first {
   display: flex;
   margin: 0px 130px;
@@ -77,6 +82,10 @@ h2 {
   margin: 0px 30px;
   line-height: 1.5em;
   color: rgb(204, 204, 204);
+}
+
+.row {
+  text-align: center;
 }
 
 .col img {

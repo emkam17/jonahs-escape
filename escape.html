@@ -4,7 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="thecss.css" type="text/css" rel="stylesheet" />
-    <script src="escape.js"></script>
+    <!-- TODO: slim minify -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous">
+    </script>
+    <script src="escape.js"/></script>
+    <!-- TODO: probably put this in escape.js -->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#answer").on('submit', function(e) {
+            e.preventDefault();
+            $.ajax({
+              type: "POST",
+              url: "escape.php",
+              data: $('#answer').serialize(),
+              success: function(d) {
+                data = JSON.parse(d);
+                if (data["correct"]) {
+                  document.getElementById("puzzle").innerHTML = data["next"]
+                }
+              }
+            });
+          }
+        );
+      }
+    );
+    </script>
     <title>escape room</title>
   </head>
 
@@ -13,90 +40,61 @@
       <h1>escape the room</h1>
     </header>
 
-    <div class="first">
-      <div class="col">
-        <h2>Jonah's Escape Plan</h2>
-        <ul>
-          <li>
-            I'm going to leave from the port of Jaffa (Now part of Tel Aviv)
-          </li>
-          <li>
-            I want to be somewhat discreet, so I think I will try and take a
-            good number of flight transfers
-          </li>
-          <li>
-            I've marked all possible destinations and transfer locations on the
-            map
-          </li>
-          <li>I don't want to visit the same place twice (why?)</li>
-          <li>I want to visit Asia only once</li>
-          <li>
-            I want to avoid long flights until absolutely necessary, so with
-            exceptions to my last flight, I want all my flights to be within 11
-            hours long.
-          </li>
-          <li>
-            My last flight is going to be pretty nasty. It's a ~15 hour flight
-            that crosses the Atlantic Ocean.
-          </li>
-        </ul>
+    <div class="puzzle" id="puzzle">
+      <div class="first">
+        <div class="col">
+          <h2>Jonah's Escape Plan</h2>
+          <p>
+          The word of the Lord came to Jonah son of Amittai: “Go to the great city of
+          Nineveh and preach against it, because its wickedness has come up before me.”
+          But Jonah ran away from the Lord by taking multiple flight transfers, but not
+          without planning his trip first. Find the route that Jonah took in his escape.
+          </p>
+          <p> Jonah's Notes: </p>
+          <ul>
+            <li>
+              I'm going to leave from the port of Jaffa (Now part of Tel Aviv)
+            </li>
+            <li>
+              I want to be somewhat discreet, so I think I will try and take a
+              good number of flight transfers
+            </li>
+            <li>
+              I've marked all possible destinations and transfer locations on the
+              map
+            </li>
+            <li>I don't want to visit the same place twice (why?)</li>
+            <li>I want to visit Asia only once</li>
+            <li>
+              I want to avoid long flights until absolutely necessary, so with
+              exceptions to my last flight, I want all my flights to be within 11
+              hours long.
+            </li>
+            <li>
+              My last flight is going to be pretty nasty. It's a ~15 hour flight
+              that crosses the Atlantic Ocean.
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <img src="images/puzzle1.jpg" alt="first puzzle" />
+        </div>
       </div>
-      <div class="col">
-        <img src="images/puzzle1.jpg" alt="first puzzle" />
+      <div class="row">
+        <p>
+        Give your answer by combining the first letter of each city Jonah visits in
+        order. For example, if Jonah visits Hong Kong -&gt; Beijing -&gt; New York
+        -&gt; Seoul, the solution would be HKBNYS.
+        </p>
       </div>
     </div>
     <div class="flight_num">
-      <form>
+      <form id="answer">
         <label>Answer!</label>
-        <input type="text" id="flight" name="flight" />
+        <input type="text" id="answer" name="answer" />
+        <input type="hidden" id="puzzle" name="puzzle" value="flight"/>
         <input type="submit" value="submit" />
       </form>
-    </div>
-
-    <div class="second">
-      <p>
-        Now the Lord provided a huge fish to swallow Jonah, and Jonah was in the
-        belly of the fish three days and three nights. From the fish's belly, he
-        sent out a weird message in a bottle. Decipher his message.
-      </p>
-
-      <ul>
-        <li>
-          And the Lord commanded the fish, and it vomited Jonah onto dry land.
-        </li>
-        <li>.</li>
-        <li>From inside the fish Jonah prayed to the Lord his God.</li>
-        <li>
-          You hurled me into the depths, into the very heart of the seas, and
-          the currents swirled about me; all your waves and breakers swept over
-          me.
-        </li>
-        <li>
-          He said: “In my distress I called to the Lord, and he answered me.
-          From deep in the realm of the dead I called for help, and you listened
-          to my cry.
-        </li>
-        <li>,</li>
-        <li>
-          You hurled me into the depths, into the very heart of the seas, and
-          the currents swirled about me; all your waves and breakers swept over
-          me.
-        </li>
-        <li>.</li>
-        <li>
-          But I, with shouts of grateful praise, will sacrifice to you. What I
-          have vowed I will make good. I will say, ‘Salvation comes from the
-          Lord.’ ”
-        </li>
-        <li>
-          To the roots of the mountains I sank down; the earth beneath barred me
-          in forever. But you, Lord my God, brought my life up from the pit.
-        </li>
-        <li>
-          “Those who cling to worthless idols turn away from God’s love for
-          them.
-        </li>
-      </ul>
     </div>
 
     <div class="third"></div>
