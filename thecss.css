@@ -41,7 +41,7 @@ header {
 }
 
 h1 {
-  font-weight: 100;
+  font-weight: 400;
   margin: 0px 0px;
   padding-top: 30px;
 }
@@ -102,4 +102,40 @@ h2 {
 
 .second {
   margin: 0px 190px;
+}
+
+/* modal stuff */
+.modal {
+  display: none;
+  position: fixed;
+  text-align: center;
+  align-content: center;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  margin-top: 300px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.close {
+  color: rgb(255, 255, 255);
+  float: right;
+  margin-right: 20px;
+  margin-top: 8px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #db1842;
+  text-decoration: none;
+  cursor: pointer;
 }

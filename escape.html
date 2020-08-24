@@ -12,7 +12,7 @@
     </script>
     <script src="escape.js"/></script>
     <!-- TODO: probably put this in escape.js -->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       $(document).ready(function() {
         $("#answer").on('submit', function(e) {
             e.preventDefault();
@@ -30,26 +30,43 @@
           }
         );
       }
-    );
+    ); -->
     </script>
     <title>escape room</title>
   </head>
 
   <body>
+
+    <div id="wrongModal" class="modal">
+      <!-- Modal content -->
+      <span class="close">&times;</span>
+      <div class="modal-content">
+        <p>that is wrong.</p>
+      </div>
+    
+    </div>
+    
     <header>
-      <h1>escape the room</h1>
+      <h1>Jonah's Escape</h1>
     </header>
 
     <div class="puzzle" id="puzzle">
       <div class="first">
         <div class="col">
-          <h2>Jonah's Escape Plan</h2>
+          <!-- <h2>Jonah's Escape Plan</h2> -->
           <p>
-          The word of the Lord came to Jonah son of Amittai: “Go to the great city of
-          Nineveh and preach against it, because its wickedness has come up before me.”
+          The word of the Lord came to Jonah son of Amittai: <em>“Go to the great city of
+          Nineveh and preach against it, because its wickedness has come up before me.” </em>
           But Jonah ran away from the Lord by taking multiple flight transfers, but not
-          without planning his trip first. Find the route that Jonah took in his escape.
+          without planning his trip first. </p>
+
+          <p><strong>Find the route that Jonah took in his escape.</strong>
           </p>
+
+          <img src="images/puzzle1.jpg" alt="first puzzle" />
+        </div>
+          <div class="col">
+          <!-- <br> -->
           <p> Jonah's Notes: </p>
           <ul>
             <li>
@@ -75,12 +92,12 @@
               that crosses the Atlantic Ocean.
             </li>
           </ul>
-        </div>
-        <div class="col">
-          <img src="images/puzzle1.jpg" alt="first puzzle" />
-        </div>
+        <!-- </div> -->
+     
+        <!-- </div>
       </div>
-      <div class="row">
+      <div class="row"> -->
+        <br>
         <p>
         Give your answer by combining the first letter of each city Jonah visits in
         order. For example, if Jonah visits Hong Kong -&gt; Beijing -&gt; New York
@@ -88,6 +105,8 @@
         </p>
       </div>
     </div>
+
+
     <div class="flight_num">
       <form id="answer">
         <label>Answer!</label>
@@ -97,6 +116,5 @@
       </form>
     </div>
 
-    <div class="third"></div>
   </body>
 </html>

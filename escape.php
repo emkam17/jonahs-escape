@@ -50,12 +50,50 @@ $second = <<<SECOND
       them.
     </li>
   </ul>
+
+  <div class="another_num">
+      <form id="answer">
+        <label>Answer!</label>
+        <input type="text" id="answer" name="answer" />
+        <input type="hidden" id="puzzle" name="puzzle" value="flight"/>
+        <input type="submit" value="submit" />
+      </form>
+    </div>
 </div>
+
 SECOND;
 
 // DOM for third puzzle goes here
 $third = <<<THIRD
-<div>
+<div class="third">
+  <div class="col">
+    <p>Jonah began by going a day’s journey into the city, proclaiming, “Forty more
+    days and Nineveh will be overthrown.” Unfortunately, the megaphone he used
+    didn't work the way he thought it would, and he ended up saying something
+    completely different. Try and decipher Jonah's true message.</p>
+
+    <audio controls <source src="phase3-audio.wav" type="audio/wav"> </audio>
+    <a href="phase3-audio.wav" download>Download Mysterious Audio</a>
+  </div>
+
+  <div class="col>
+    <p>You may find these excerpts in the megaphone's instruction manual useful:</p>
+
+    <p>by the decree of king and his nobles do not let people animals taste anything
+    eat drink but be covered with sackcloth call urgently on God</p> 
+
+    <p>nobles covered covered eat be :// but the . his on / drink people people and but urgently</p>
+
+    <div class="verse">
+      <form id="answer">
+        <label>Answer!</label>
+        <input type="text" id="answer" name="answer" />
+        <input type="hidden" id="puzzle" name="puzzle" value="flight"/>
+        <input type="submit" value="submit" />
+      </form>
+    </div>
+
+  </div>
 </div>
 THIRD;
 
