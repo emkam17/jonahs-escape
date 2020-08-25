@@ -19,18 +19,18 @@ body {
   margin-top: 520px;
 }
 
-.front a:link {
-  color: #db1842;
+a:link {
+  color: #184cdb;
   text-decoration: none;
 }
 
-.front a:visited {
-  color: #db1842;
+a:visited {
+  color: #184cdb;
   text-decoration: none;
 }
 
-.front a:hover {
-  color: #ff91a9;
+a:hover {
+  color: #67c4fa;
   text-decoration: none;
 }
 
@@ -49,16 +49,12 @@ h1 {
 }
 
 h2 {
-  /* text-align: center; */
   color: white;
-  /* font-weight: 400; */
   font-size: 30px;
-  /* margin-left: 160px; */
-  /* font-variant: small-caps; */
 }
 
 .do {
-  color: #db1842;
+  color: #67c4fa;
 }
 
 .row_home {
@@ -117,29 +113,27 @@ h2 {
 }
 
 .second {
+  display: flex;
   margin: 0px 190px;
 }
 
 .third {
   display: flex;
+  margin: 0px 190px;
 }
 
-/* .third col {
-  margin: 0px 200px;
-} */
-
-.download a:link {
-  color: #db1842;
+.col a:link {
+  color: #184cdb;
   text-decoration: none;
 }
 
-.download a:visited {
-  color: #db1842;
+.col a:visited {
+  color: #184cdb;
   text-decoration: none;
 }
 
-.download a:hover {
-  color: #ff91a9;
+.col a:hover {
+  color: #67c4fa;
   text-decoration: none;
 }
 
@@ -169,11 +163,11 @@ h2 {
   margin-top: 280px;
   font-size: 20px;
   text-align: center;
-  background-color: rgb(77, 77, 77);
-  width: 30%;
+  background-color: #3784c2;
+  width: 28%;
   border-radius: 10px;
   /* height: 120px; */
-  height: 18%;
+  height: 19%;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0px 4px 10px black;
@@ -183,35 +177,57 @@ h2 {
   padding-top: 16px;
 }
 
-.next_btn {
+/* .next_btn {
   color: #ffffff;
-}
+} */
 
 #right {
-  background-color: white;
+  background-color: #184cdb;
   font-size: 13px;
   margin-top: 10px;
   padding: 5px 15px;
-  color: #290c09;
+  color: white;
   border: none;
   border-radius: 9px;
 }
 
 #right:hover {
-  background-color: #db1842;
-  color: white;
+  background-color: white;
+  color: #184cdb;
+  cursor: pointer;
 }
 
 .close {
   color: rgb(255, 255, 255);
   float: right;
-  margin-right: 20px;
+  margin-right: 16px;
   font-size: 28px;
   font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: #db1842;
+  color: #ff2566;
   text-decoration: none;
+  cursor: pointer;
+}
+
+/* answer and submit */
+#answer {
+  padding: 3px 3px;
+}
+
+#submit_btn {
+  background-color: #184cdb;
+  font-size: 13px;
+  margin-top: 10px;
+  padding: 5px 15px;
+  color: white;
+  border: none;
+  border-radius: 9px;
+}
+
+#submit_btn:hover {
+  background-color: #67c4fa;
+  color: white;
 }
