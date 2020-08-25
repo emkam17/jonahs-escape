@@ -11,27 +11,6 @@
       crossorigin="anonymous">
     </script>
     <script src="escape.js"/></script>
-    <!-- TODO: probably put this in escape.js -->
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $("#answer").on('submit', function(e) {
-            e.preventDefault();
-            $.ajax({
-              type: "POST",
-              url: "escape.php",
-              data: $('#answer').serialize(),
-              success: function(d) {
-                data = JSON.parse(d);
-                if (data["correct"]) {
-                  document.getElementById("puzzle").innerHTML = data["next"]
-                }
-              }
-            });
-          }
-        );
-      }
-    );
-    </script>
     <title>escape room</title>
   </head>
 
@@ -49,17 +28,17 @@
         </div>
       </div>
     </div>
-    
+
     <div id="wrongModal" class="modal">
       <div class="modal-content" id="modal-content">
-        <span class="close">&times;</span>
+        <span class="close" id="close" onclick="hide();">&times;</span>
         <br>
         <div class="wrong">
           <p>that is wrong.</p>
         </div>
       </div>
     </div>
-    
+
     <header>
       <h1>the escape room</h1>
     </header>
@@ -108,12 +87,8 @@
               that crosses the Atlantic Ocean.
             </li>
           </ul>
-        <!-- </div> -->
-     
-        <!-- </div>
-      </div>
-      <div class="row"> -->
         <br>
+
         <p>
         Give your answer by combining the first letter of each city Jonah visits in
         order. For example, if Jonah visits Hong Kong -&gt; Beijing -&gt; New York
@@ -121,13 +96,14 @@
         </p>
       </div>
     </div>
+    </div>
 
 
     <div class="flight_num">
-      <form id="answer">
+      <form id="answer-form">
         <label>Answer!</label>
         <input type="text" id="answer" name="answer" />
-        <input type="hidden" id="puzzle" name="puzzle" value="flight"/>
+        <input type="hidden" id="puzzle-stage" name="puzzle" value="flight"/>
         <input type="submit" value="submit" />
       </form>
     </div>
