@@ -230,11 +230,11 @@ h2 {
 
 /* end */
 .congrats {
-  margin-top: 80px;
+  margin-top: 50px;
 }
 .congrats h1 {
-  font-size: 100px;
-  margin-left: 30px;
+  font-size: 70px;
+  margin-left: 70px;
   margin-top: 10px;
   font-weight: 100;
 }
@@ -245,18 +245,18 @@ h2 {
 
 .read {
   font-size: 35px;
-  margin-left: 90px;
+  margin-left: 130px;
 }
 
 .read p {
   font-weight: 100;
-  margin-top: 230px;
+  margin-top: 170px;
 }
 
 .playagain {
-  font-size: 60px;
-  margin-top: 680px;
-  margin-left: 480px;
+  font-size: 40px;
+  margin-top: 530px;
+  margin-left: 530px;
   text-align: right;
 }
 

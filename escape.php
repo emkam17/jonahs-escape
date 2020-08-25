@@ -51,7 +51,7 @@ $second = <<<SECOND
     </div>
 
       <div class="col">
-        <img src="images/puzzle2.jpg" alt="second puzzle" />
+      <a href="images/puzzle2.jpg" target="blank_"><img src="images/puzzle2.jpg" alt="second puzzle" /></a>
         <div>
       <a href="images/puzzle2.jpg" target="blank_">Click to enlarge</a>
       </div>
