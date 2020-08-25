@@ -12,7 +12,7 @@
     </script>
     <script src="escape.js"/></script>
     <!-- TODO: probably put this in escape.js -->
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
       $(document).ready(function() {
         $("#answer").on('submit', function(e) {
             e.preventDefault();
@@ -30,38 +30,54 @@
           }
         );
       }
-    ); -->
+    );
     </script>
     <title>escape room</title>
   </head>
 
   <body>
 
-    <div id="wrongModal" class="modal">
-      <!-- Modal content -->
-      <span class="close">&times;</span>
-      <div class="modal-content">
-        <p>that is wrong.</p>
+    <div id="rightModal" class="modal">
+      <div class="modal-content" id="modal-content">
+        <div class="right">
+          <p>Nice! You got it right.</p>
+        </div>
+        <div class="next_btn">
+          <form id="next">
+            <input type="submit" id="right" value="Next" />
+          </form>
+        </div>
       </div>
+    </div>
     
+    <div id="wrongModal" class="modal">
+      <div class="modal-content" id="modal-content">
+        <span class="close">&times;</span>
+        <br>
+        <div class="wrong">
+          <p>that is wrong.</p>
+        </div>
+      </div>
     </div>
     
     <header>
-      <h1>Jonah's Escape</h1>
+      <h1>the escape room</h1>
     </header>
 
     <div class="puzzle" id="puzzle">
+      <!-- <h2>Jonah's Escape Plan</h2> -->
       <div class="first">
         <div class="col">
-          <!-- <h2>Jonah's Escape Plan</h2> -->
+          <h2>Jonah's Escape Plan</h2>
           <p>
           The word of the Lord came to Jonah son of Amittai: <em>“Go to the great city of
           Nineveh and preach against it, because its wickedness has come up before me.” </em>
           But Jonah ran away from the Lord by taking multiple flight transfers, but not
           without planning his trip first. </p>
 
-          <p><strong>Find the route that Jonah took in his escape.</strong>
-          </p>
+          <div class="do">
+            <p>Find the route that Jonah took in his escape.</p>
+          </div>
 
           <img src="images/puzzle1.jpg" alt="first puzzle" />
         </div>

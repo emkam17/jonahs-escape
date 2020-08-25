@@ -6,6 +6,7 @@ include 'validate.php';
 ensure_post();
 
 $second = <<<SECOND
+  
 <div class="second">
   <p>
     Now the Lord provided a huge fish to swallow Jonah, and Jonah was in the
@@ -76,7 +77,7 @@ $third = <<<THIRD
     <a href="phase3-audio.wav" download>Download Mysterious Audio</a>
   </div>
 
-  <div class="col>
+  <div class="col">
     <p>You may find these excerpts in the megaphone's instruction manual useful:</p>
 
     <p>by the decree of king and his nobles do not let people animals taste anything
@@ -101,7 +102,7 @@ THIRD;
 switch ($_POST['puzzle']) {
   case "flight":
     validate($_POST['answer'], "TAJSDSP", $second);
-      break;
+    break;
   case "fish":
     validate($_POST['answer'], "hmm", $third);
     break;
@@ -109,6 +110,3 @@ switch ($_POST['puzzle']) {
     http_response_code(400);
     exit;
 }
-?>
-
-

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="thecss.css" type="text/css" rel="stylesheet" />
+    <!-- TODO: slim minify -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous">
+    </script>
+    <script src="escape.js"/></script>
+
+  <title>escape room</title>
+</head>
+
+<body>
+  <header>
+    <h1>escape the room</h1>
+  </header>
+
+  <!-- <h2>Jonah's Prayer</h2> -->
+  <div class="second">
+    <h2>Jonah's Prayer</h2>
+    <p>
+      Now the Lord provided a huge fish to swallow Jonah, and Jonah was in the
+      belly of the fish three days and three nights. From the fish's belly, he
+      sent out a weird message in a bottle. Decipher his message.
+    </p>
+  
+    <div class="puzzle2">
+      <img src="images/puzzle2.jpg" alt="first puzzle" />
+    </div>
+  
+    <div class="another_num">
+        <form id="answer">
+          <label>Answer!</label>
+          <input type="text" id="answer" name="answer" />
+          <input type="hidden" id="puzzle" name="puzzle" value="flight"/>
+          <input type="submit" value="submit" />
+        </form>
+      </div>
+  </div>
+
+  <!-- <h2>Jonah Goes to Nineveh</h2> -->
+  <div class="third">
+    <div class="col">
+      <h2>Jonah Goes to Nineveh</h2>
+      <p>Jonah began by going a day’s journey into the city, proclaiming, “Forty more
+      days and Nineveh will be overthrown.” Unfortunately, the megaphone he used
+      didn't work the way he thought it would, and he ended up saying something
+      completely different. Try and decipher Jonah's true message.</p>
+  
+      <audio controls <source src="phase3-audio.wav" type="audio/wav"> </audio>
+      <div class="download">
+        <a href="phase3-audio.wav" download>Download Mysterious Audio Here</a>
+    </div>
+    </div>
+  
+    <div class="col">
+      <p>You may find these excerpts in the megaphone's instruction manual useful:</p>
+  
+      <div class="manual">
+        <p>by the decree of king and his nobles do not let people animals taste anything
+      eat drink but be covered with sackcloth call urgently on God</p> 
+  
+      <p>nobles covered covered eat be :// but the . his on / drink people people and but urgently</p>
+    </div>
+  
+      <div class="verse">
+        <form id="answer">
+          <label>Answer!</label>
+          <input type="text" id="answer" name="answer" />
+          <input type="hidden" id="puzzle" name="puzzle" value="flight"/>
+          <input type="submit" value="submit" />
+        </form>
+      </div>
+  
+    </div>
+  </div>
+</body>
+</html>
