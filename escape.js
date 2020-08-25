@@ -23,6 +23,9 @@ $(document).ready(function () {
           $("#next").on("submit", function (e) {
             e.preventDefault();
             rightModal.style.display = "none";
+            if (data["redirect"]) {
+                window.location.href = data["next"]
+            }
             document.getElementById("answer").value = ""
             document.getElementById("puzzle").innerHTML = data["next"];
             document.getElementById("puzzle-stage").value =  data["stage"];

@@ -18,6 +18,8 @@ function validate($input, $answer, $next, $stage)
     $output = [
       'correct' => false,
       'next' => '',
+      'stage' => '',
+      'redirect' => false,
     ];
     echo json_encode($output);
   } else {
@@ -26,6 +28,7 @@ function validate($input, $answer, $next, $stage)
       // TODO: get a valid redirect url
       'next' => $next,
       'stage' => $stage,
+      'redirect' => $stage == "end",
     ];
     echo json_encode($output);
   }
@@ -46,7 +49,7 @@ $second = <<<SECOND
         <p>Find the town which Jonah is stranded in.</p>
       </div>
     </div>
-  
+
       <div class="col">
         <img src="images/puzzle2.jpg" alt="second puzzle" />
         <div>
@@ -69,20 +72,20 @@ $third = <<<THIRD
       days and Nineveh will be overthrown.” Unfortunately, the megaphone he used
       didn't work the way he thought it would, and he ended up saying something
       completely different. Try and decipher Jonah's true message.</p>
-  
+
       <audio controls> <source src="phase3-audio.wav" type="audio/wav"> </audio>
       <div>
         <a href="phase3-audio.wav" download>Download Mysterious Audio Here</a>
     </div>
     </div>
-  
+
     <div class="col">
       <p>You may find these excerpts in the megaphone's instruction manual useful:</p>
-  
+
       <div class="manual">
         <p>by the decree of king and his nobles do not let people animals taste anything
-      eat drink but be covered with sackcloth call urgently on God</p> 
-  
+      eat drink but be covered with sackcloth call urgently on God</p>
+
       <p>nobles covered covered eat be :// but the . his on / drink people people and but urgently</p>
     </div>
   </div>
@@ -90,9 +93,7 @@ $third = <<<THIRD
 THIRD;
 
 // Can make this a redirect if we want
-$end = <<<END
-<p> yay! <p>
-END;
+$end = "end.html";
 
 // TODO: Let's not use a switch and use a dict if we can
 switch ($_POST['puzzle']) {
