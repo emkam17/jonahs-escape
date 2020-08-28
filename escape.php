@@ -43,7 +43,7 @@ $second = <<<SECOND
     <div class="col">
       <h2>Jonah's Prayer</h2>
       <p>
-      Now the Lord provided a huge fish to swallow Jonah, and Jonah was in the belly of the fish three days and three nights. And the Lordcommanded the fish, and it vomited Jonah onto dry land. Jonah, however, was stuck and needed a ride, so he sends a message in a bottle back into the sea.
+      Now the Lord provided a huge fish to swallow Jonah, and Jonah was in the belly of the fish three days and three nights. And the Lord commanded the fish, and it vomited Jonah onto dry land. Jonah, however, was stuck and needed a ride, so he sends a message in a bottle back into the sea.
       </p>
 
       <div class="do">

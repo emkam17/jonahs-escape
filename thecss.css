@@ -57,6 +57,10 @@ h2 {
   color: #67c4fa;
 }
 
+ul {
+  line-height: 2em;
+}
+
 .row_home {
   display: flex;
 }
